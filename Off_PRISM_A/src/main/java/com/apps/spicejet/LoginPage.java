@@ -13,7 +13,18 @@ public class LoginPage extends TestBase {
 	{
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(xpath="//input[@id='first_name']")
+	
+	@FindBy(xpath="//a[@class=\"nav-a nav-a-2 nav-progressive-attribute\"]")
+	private WebElement cartClick;
+	
+	public void cart_Click()
+	{
+		cartClick.click();
+		
+		System.out.println(driver.switchTo().frame(0).getTitle());
+	}
+	
+	/*@FindBy(xpath="//input[@id='first_name']")
 	private WebElement F_name_txt;
 	
 	public void First_Name()
@@ -71,7 +82,7 @@ public class LoginPage extends TestBase {
 		s1.selectByValue("12");	
 	}
 	
-	/*@FindBy(xpath="select[@class=\"react-datepicker__month-select\"]")
+	@FindBy(xpath="select[@class=\"react-datepicker__month-select\"]")
 	private WebElement select_day;
 	
 	public void Select_day()

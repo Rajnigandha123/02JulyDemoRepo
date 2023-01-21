@@ -130,14 +130,14 @@
                   <a name="Verify">
                   </a> <!-- Verify -->
                   <span class="method-name">Verify</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: select[@class=&quot;react-datepicker__month-select&quot;]
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+                  <div class="stack-trace">org.openqa.selenium.InvalidArgumentException: invalid argument: uniqueContextId not found
+  (Session info: chrome=109.0.5414.75)
 Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [7486a9b1-94ce-49df-9984-0cc8764e84b3, findElement {using=xpath, value=select[@class=&quot;react-datepicker__month-select&quot;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.2, moz:accessibilityChecks: false, moz:buildID: 20230104165113, moz:debuggerAddress: 127.0.0.1:1196, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9180, moz:profile: C:\Users\Icon\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:1196/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 7486a9b1-94ce-49df-9984-0cc8764e84b3
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [165f124eef541a72b8e7a92de0af5684, findElement {using=xpath, value=//a[@class=&quot;nav-a nav-a-2 nav-progressive-attribute&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Icon\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:49812}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49812/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 165f124eef541a72b8e7a92de0af5684
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -151,9 +151,9 @@ Session ID: 7486a9b1-94ce-49df-9984-0cc8764e84b3
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-	at com.apps.spicejet.LoginPage.Select_year(LoginPage.java:59)
-	at com.apps.spicejet.LoginTest.Verify(LoginTest.java:22)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.apps.spicejet.LoginPage.cart_Click(LoginPage.java:22)
+	at com.apps.spicejet.LoginTest.Verify(LoginTest.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
@@ -172,7 +172,7 @@ Session ID: 7486a9b1-94ce-49df-9984-0cc8764e84b3
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.apps.spicejet.LoginTest&quot;/&gt;
     &lt;/classes&gt;
@@ -218,12 +218,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Verify')
 data.setCell(0, 2, 'com.apps.spicejet.LoginTest')
-data.setCell(0, 3, 36390);
+data.setCell(0, 3, 4849);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -251,19 +251,15 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.apps.spicejet.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(firefox)</span>
+                <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Verify</span>
-                <span class="method-start">110735 ms</span>
+                <span class="method-start">108898 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">setDown</span>
-                <span class="method-start">147363 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

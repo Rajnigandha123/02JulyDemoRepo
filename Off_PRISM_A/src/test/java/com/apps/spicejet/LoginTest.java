@@ -11,7 +11,10 @@ public class LoginTest extends TestBase{
 	public void Verify() throws Exception
 	{
 		LoginPage LP=new LoginPage();
-		LP.First_Name();
+		
+		LP.cart_Click();
+		
+		/*LP.First_Name();
 		 Thread.sleep(2000);
 		LP.Last_Name();
 		 Thread.sleep(2000);
@@ -21,7 +24,7 @@ public class LoginTest extends TestBase{
 		Thread.sleep(2000);
 		LP.Select_year();
 		Thread.sleep(2000);
-		LP.Select_Month();
+		LP.Select_Month();*/
 	}
 	
 }
