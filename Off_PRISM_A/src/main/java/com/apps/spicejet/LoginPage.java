@@ -21,7 +21,7 @@ public class LoginPage extends TestBase {
 	{
 		cartClick.click();
 		
-		System.out.println(driver.switchTo().frame(0).getTitle());
+		//System.out.println(driver.switchTo().frame(0).getTitle());
 	}
 	
 	/*@FindBy(xpath="//input[@id='first_name']")
